@@ -1,0 +1,9 @@
+---
+import { profile } from '../data';
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <img class="logo" src={profile.logo} alt={profile.company} />
+  <p>© {year} {profile.name} · {profile.company}. Todos os direitos reservados.</p>
+</footer>

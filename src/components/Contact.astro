@@ -1,0 +1,44 @@
+---
+import { profile } from '../data';
+---
+
+<section class="section" id="contato">
+  <p class="section-label reveal">Contato</p>
+  <h2 class="section-title reveal">Vamos conversar</h2>
+
+  <div class="contact-grid">
+    <div class="glass-panel contact-card reveal">
+      <h3>E-mail</h3>
+      {
+        profile.emails.map((e) => (
+          <div class="contact-row">
+            <span class="icon">✉</span>
+            <div>
+              <p class="label">{e.label}</p>
+              <a class="value" href={`mailto:${e.address}`}>{e.address}</a>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="glass-panel contact-card reveal">
+      <h3>Redes</h3>
+      <div class="contact-row">
+        <span class="icon">in</span>
+        <div>
+          <p class="label">LinkedIn</p>
+          <a class="value" href={profile.linkedin} target="_blank" rel="noopener">
+            linkedin.com/in/thyagoferreira
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="glass-panel cta-zone reveal">
+    <h2>{profile.company}</h2>
+    <p>{profile.companyTagline}</p>
+    <a class="btn" href={`mailto:${profile.emails[1].address}`}>Solicitar proposta</a>
+  </div>
+</section>

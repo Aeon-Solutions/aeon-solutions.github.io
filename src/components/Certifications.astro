@@ -1,0 +1,49 @@
+---
+import { certifications } from '../data';
+---
+
+<section class="section" id="certificacoes">
+  <p class="section-label reveal">Credenciais</p>
+  <h2 class="section-title reveal">Certificações</h2>
+  <p class="section-subtitle reveal">
+    Trilha completa de formação em cibersegurança e segurança ofensiva.
+  </p>
+
+  <div class="cert-grid">
+    {
+      certifications.map((c) => (
+        <div class="glass-panel cert-card">
+          <div class="cert-card-main">
+            <p class="level">{c.level}</p>
+            <h3 class="name">{c.name}</h3>
+            <p class="meta">Emissor: <span class="issuer">{c.issuer}</span></p>
+            {c.code && <p class="meta">Código: {c.code}</p>}
+            <p class="meta">Válida até: {c.expires}</p>
+            <a class="cert-link" href={c.url} target="_blank" rel="noopener">Ver certificado ↗</a>
+          </div>
+
+          {
+            c.badgeImage && (
+              <a
+                class="badge-link"
+                href={`https://www.credly.com/badges/${c.badgeId}`}
+                target="_blank"
+                rel="noopener"
+                aria-label={`${c.name} — emblema Credly`}
+              >
+                <span class="badge-frame">
+                  <img
+                  class={['cert-badge-img', c.badgeLarge ? 'large' : ''].join(' ')}
+                  src={c.badgeImage}
+                  alt={`${c.name} — emblema Credly`}
+                  loading="lazy"
+                />
+                </span>
+              </a>
+            )
+          }
+        </div>
+      ))
+    }
+  </div>
+</section>

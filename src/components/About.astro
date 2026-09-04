@@ -1,0 +1,21 @@
+---
+import { competencyGroups } from '../data';
+---
+
+<section class="section" id="sobre">
+  <p class="section-label reveal">Competências</p>
+  <h2 class="section-title reveal">Habilidades</h2>
+
+  <div class="competency-grid">
+    {
+      competencyGroups.map((g) => (
+        <div class="glass-panel competency-card reveal">
+          <h3 class="competency-title">{g.title}</h3>
+          <ul class="competency-list">
+            {g.items.map((i) => <li>{i}</li>)}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</section>

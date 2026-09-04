@@ -1,0 +1,24 @@
+---
+import { experience } from '../data';
+---
+
+<section class="section" id="experiencia">
+  <p class="section-label reveal">Trajetória</p>
+  <h2 class="section-title reveal">Experiência</h2>
+
+  <div class="timeline">
+    {
+      experience.map((e) => (
+        <div class="timeline-item reveal">
+          <p class="period">{e.period}</p>
+          <p class="role">{e.role}</p>
+          <p class="company">{e.company} · {e.location}</p>
+          <p class="summary">{e.summary}</p>
+          <ul>
+            {e.highlights.map((h) => <li>{h}</li>)}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</section>

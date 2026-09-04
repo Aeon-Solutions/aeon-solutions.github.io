@@ -1,0 +1,18 @@
+{
+  "name": "aeon-portfolio",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Portfólio corporativo de Thyago Ferreira — Cofundador da Aeon Enterprise Solutions",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.6.2",
+    "gsap": "^3.12.7"
+  },
+  "devDependencies": {}
+}

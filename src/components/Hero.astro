@@ -1,0 +1,35 @@
+---
+import { profile, bio } from '../data';
+---
+
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1 class="hero-name">
+        Thyago <span class="accent">Ferreira</span>
+      </h1>
+      <div class="hero-tags">
+        {['Cibersegurança', 'Ethical Hacking & Pentest', 'SOC & Detecção', 'IAM / Gestão de Acesso', 'GRC'].map((b) => (
+          <span class="tag">{b}</span>
+        ))}
+      </div>
+
+      <h2 class="hero-profile-title">Perfil profissional</h2>
+      {
+        bio.paragraphs.map((p) => (
+          <p class="hero-bio">{p}</p>
+        ))
+      }
+    </div>
+
+    <div class="hero-photo">
+      <div class="hero-photo-wrap">
+        <img src={profile.photo} alt={`${profile.name} — perfil`} />
+      </div>
+
+      {profile.isCofounder && (
+        <span class="cofounder-badge">◆ {profile.companyRole} — {profile.company}</span>
+      )}
+    </div>
+  </div>
+</section>

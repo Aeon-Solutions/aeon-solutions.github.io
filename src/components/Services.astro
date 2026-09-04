@@ -1,0 +1,35 @@
+---
+import { services } from '../data';
+
+const icons: Record<string, string> = {
+  server: '🖥',
+  shield: '🛡',
+  network: '🌐',
+  terminal: '⌨',
+  key: '🔑',
+  building: '🏢'
+};
+---
+
+<section class="section" id="servicos">
+  <p class="section-label reveal">O que ofereço</p>
+  <h2 class="section-title reveal">Serviços</h2>
+  <p class="section-subtitle reveal">
+    Soluções de infraestrutura, cibersegurança e automação.
+  </p>
+
+  <div class="services-grid">
+    {
+      services.map((s) => (
+        <div class="glass-panel service-card reveal">
+          <div class="service-icon">{icons[s.icon] ?? '◆'}</div>
+          <h3>{s.title}</h3>
+          <p>{s.description}</p>
+          <div class="tags">
+            {s.tags.map((t) => <span class="tag">{t}</span>)}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

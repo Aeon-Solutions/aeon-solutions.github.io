@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Certifications from '../components/Certifications.astro';
+import Services from '../components/Services.astro';
+import Experience from '../components/Experience.astro';
+import Education from '../components/Education.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Thyago Ferreira — Cofundador da Aeon Enterprise Solutions"
+  description="Portfólio de Thyago Ferreira — Analista de Suporte e Infraestrutura, Cibersegurança, Ethical Hacker e Cofundador da Aeon Enterprise Solutions."
+>
+  <div class="aurora" aria-hidden="true"></div>
+
+  <Navbar />
+  <main>
+    <Hero />
+    <About />
+    <Certifications />
+    <Services />
+    <Experience />
+    <Education />
+    <Contact />
+  </main>
+  <Footer />
+
+  <script>
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray('.reveal').forEach((el) => {
+      gsap.from(el, {
+        opacity: 0,
+        y: 28,
+        duration: 0.8,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 88%',
+          toggleActions: 'play none none none'
+        }
+      });
+    });
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) {
+      gsap.set('.reveal', { opacity: 1, y: 0 });
+      ScrollTrigger.getAll().forEach((t) => t.kill());
+    }
+  </script>
+</Layout>

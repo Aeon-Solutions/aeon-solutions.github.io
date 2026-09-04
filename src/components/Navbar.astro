@@ -1,0 +1,24 @@
+---
+import { profile } from '../data';
+
+const navLinks = [
+  { label: 'Sobre', href: '#sobre' },
+  { label: 'Certificações', href: '#certificacoes' },
+  { label: 'Serviços', href: '#servicos' },
+  { label: 'Experiência', href: '#experiencia' },
+  { label: 'Contato', href: '#contato' }
+];
+---
+
+<header class="navbar">
+  <a href="#top">
+    <img class="logo" src={profile.logo} alt={profile.company} />
+  </a>
+  <nav class="nav-links">
+    {
+      navLinks.map((l) => (
+        <a href={l.href}>{l.label}</a>
+      ))
+    }
+  </nav>
+</header>
