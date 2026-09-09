@@ -76,7 +76,7 @@ export const profile: Profile = {
     { label: 'Pessoal', address: 'thyago.engenharia@outlook.com' },
     { label: 'Aeon Enterprise Solutions', address: 'aeon.enterprise.solutions@gmail.com' }
   ],
-  linkedin: 'https://www.linkedin.com/in/thyagoferreira-1a5aa4207',
+  linkedin: 'https://www.linkedin.com/in/thyago-ferreira-1a5aa4207/',
   photo: '/Foto.svg',
   logo: '/aeon.svg'
 };
@@ -318,20 +318,7 @@ export const services: Service[] = [
 ];
 
 export const experience: Experience[] = [
-  {
-    company: 'V.tal',
-    role: 'Coordenador de TI (Helpdesk & Service Desk)',
-    period: 'mai 2025 — presente',
-    location: 'Rio de Janeiro, RJ',
-    summary:
-      'Liderança e gestão da equipe de suporte técnico (N1, N2 e N3) com foco em excelência no atendimento.',
-    highlights: [
-      'Liderança e desenvolvimento da equipe de suporte técnico (N1, N2 e N3), garantindo a excelência no atendimento',
-      'Gestão e análise de SLAs, FCR (First Contact Resolution), TMT (Tempo Médio de Atendimento) e NPS/CSAT de satisfação',
-      'Padronização de processos ITIL/ITSM, atuando como ponto focal para escalonamento e resolução de incidentes críticos de infraestrutura',
-      'Criação de base de conhecimento, automação de chamados recorrentes e controle de inventário de ativos e licenciamento de software'
-    ]
-  },
+
   {
     company: 'Grupo Trigo',
     role: 'Assistente de TI III',
