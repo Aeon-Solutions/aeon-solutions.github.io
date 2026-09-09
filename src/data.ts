@@ -336,7 +336,7 @@ export const experience: Experience[] = [
   {
     company: 'Grupo Trigo',
     role: 'Assistente de TI III',
-    period: 'dez 2023 — jan 2025',
+    period: 'ago 2022 — jan 2025',
     location: 'Rio de Janeiro, Brasil',
     summary:
       'Suporte Técnico N2 e atuação em segurança da informação, infraestrutura e redes.',
@@ -345,16 +345,7 @@ export const experience: Experience[] = [
       'Gestão de endpoint protection (Sentinel One, Kaspersky)',
       'Administração de servidores Windows/Linux, AD, GPOs, DNS e DHCP',
       'Configuração de redes LAN/WAN/Wi-Fi, switches, roteadores e firewalls',
-      'Automação de tarefas com PowerShell, Bash e Python'
-    ]
-  },
-  {
-    company: 'Grupo Trigo',
-    role: 'Assistente de TI I',
-    period: 'ago 2022 — dez 2023',
-    location: 'Rio de Janeiro, Brasil',
-    summary: 'Suporte Técnico N1 com foco em atendimento, infraestrutura e segurança.',
-    highlights: [
+      'Automação de tarefas com PowerShell, Bash e Python',
       'Atendimento a chamados e suporte a usuários em sistemas ITSM',
       'Monitoramento inicial de alertas de segurança e eventos',
       'Identificação de vulnerabilidades e escalonamento de incidentes',
