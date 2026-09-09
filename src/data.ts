@@ -101,6 +101,10 @@ export const skills: string[] = [
   'Linux',
   'Zabbix',
   'VPN',
+  'SIEM',
+  'ITIL / ITSM',
+  'Threat Hunting',
+  'Pentesting',
   'Análise de Incidentes',
   'Automação de Tarefas',
   'IAM Design',
@@ -130,11 +134,13 @@ export const competencyGroups: CompetencyGroup[] = [
   {
     title: 'Coordenação de TI & Documentação',
     items: [
-      'Liderança e coordenação de equipes de suporte (N1/N2)',
+      'Liderança e coordenação de equipes de suporte (N1/N2/N3)',
+      'Gestão de KPIs: SLA, FCR, TMT e CSAT/NPS',
+      'Processos ITSM/ITIL e padronização de procedimentos',
+      'Governança de TI e gestão de ativos/licenciamento',
       'Treinamento e capacitação técnica da equipe',
       'Coordenação de projetos de infraestrutura e segurança',
       'Escalonamento de incidentes críticos para N3 e times especializados',
-      'Padronização de procedimentos, processos e políticas de TI',
       'Documentação de troubleshooting, guias e políticas'
     ]
   },
@@ -152,6 +158,9 @@ export const competencyGroups: CompetencyGroup[] = [
     title: 'Segurança da Informação (Cibersegurança)',
     items: [
       'Monitoramento e resposta a incidentes (SOC)',
+      'Governança de SOC e Threat Hunting',
+      'Pentesting e testes de invasão',
+      'SIEM (Wazuh, Splunk, ELK)',
       'Análise e mitigação de vulnerabilidades',
       'Políticas de segurança, controle de acessos e hardening',
       'Endpoint protection (Sentinel One, Kaspersky)',
@@ -201,7 +210,8 @@ export const certifications: Certification[] = [
     issuer: 'IBSEC',
     code: 'IC-SOC-353',
     expires: '2028',
-    url: 'https://certs.ibsec.com.br/?cert_hash=37b0811ed7af0eb2'
+    url: 'https://certs.ibsec.com.br/?cert_hash=37b0811ed7af0eb2',
+    badgeImage: '/badges/PT-IC-SOC-353.svg'
   },
   {
     name: 'Hacker Ético',
@@ -209,7 +219,8 @@ export const certifications: Certification[] = [
     issuer: 'IBSEC',
     code: 'IC-EH-1460',
     expires: '2027',
-    url: 'https://certs.ibsec.com.br/?cert_hash=c327f63697c18915'
+    url: 'https://certs.ibsec.com.br/?cert_hash=c327f63697c18915',
+    badgeImage: '/badges/PT-IC-EH-1460.svg'
   },
   {
     name: 'Analista de Cibersegurança (Governança)',
@@ -217,7 +228,8 @@ export const certifications: Certification[] = [
     issuer: 'IBSEC',
     code: 'IC-GRC-960',
     expires: '2027',
-    url: 'https://certs.ibsec.com.br/?cert_hash=3dbf98ce3ee0784f'
+    url: 'https://certs.ibsec.com.br/?cert_hash=3dbf98ce3ee0784f',
+    badgeImage: '/badges/PT-IC-GRC-960.svg'
   },
   {
     name: 'Boas Práticas de Cibersegurança',
@@ -226,7 +238,8 @@ export const certifications: Certification[] = [
     issuer: 'IBSEC',
     code: 'IC-SEC-1780',
     expires: '2027',
-    url: 'https://certs.ibsec.com.br/?cert_hash=77ca6e263f61d5e5'
+    url: 'https://certs.ibsec.com.br/?cert_hash=77ca6e263f61d5e5',
+    badgeImage: '/badges/PT-IC-SEC-1780.svg'
   },
   {
     name: 'Fortinet NSE 3',
@@ -305,6 +318,20 @@ export const services: Service[] = [
 ];
 
 export const experience: Experience[] = [
+  {
+    company: 'V.tal',
+    role: 'Coordenador de TI (Helpdesk & Service Desk)',
+    period: 'mai 2025 — presente',
+    location: 'Rio de Janeiro, RJ',
+    summary:
+      'Liderança e gestão da equipe de suporte técnico (N1, N2 e N3) com foco em excelência no atendimento.',
+    highlights: [
+      'Liderança e desenvolvimento da equipe de suporte técnico (N1, N2 e N3), garantindo a excelência no atendimento',
+      'Gestão e análise de SLAs, FCR (First Contact Resolution), TMT (Tempo Médio de Atendimento) e NPS/CSAT de satisfação',
+      'Padronização de processos ITIL/ITSM, atuando como ponto focal para escalonamento e resolução de incidentes críticos de infraestrutura',
+      'Criação de base de conhecimento, automação de chamados recorrentes e controle de inventário de ativos e licenciamento de software'
+    ]
+  },
   {
     company: 'Grupo Trigo',
     role: 'Assistente de TI III',

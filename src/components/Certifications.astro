@@ -26,16 +26,16 @@ import { certifications } from '../data';
             c.badgeImage && (
               <a
                 class="badge-link"
-                href={`https://www.credly.com/badges/${c.badgeId}`}
+                href={c.badgeId ? `https://www.credly.com/badges/${c.badgeId}` : c.url}
                 target="_blank"
                 rel="noopener"
-                aria-label={`${c.name} — emblema Credly`}
+                aria-label={`${c.name} — emblema ${c.issuer}`}
               >
                 <span class="badge-frame">
                   <img
                   class={['cert-badge-img', c.badgeLarge ? 'large' : ''].join(' ')}
                   src={c.badgeImage}
-                  alt={`${c.name} — emblema Credly`}
+                  alt={`${c.name} — emblema ${c.issuer}`}
                   loading="lazy"
                 />
                 </span>
