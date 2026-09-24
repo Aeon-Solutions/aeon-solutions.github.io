@@ -332,7 +332,6 @@ export const experience: Experience[] = [
       'Criação de base de conhecimento, automação de chamados recorrentes e controle de inventário de ativos e licenciamento de software'
     ]
   },
-
   {
     company: 'Grupo Trigo',
     role: 'Assistente de TI III',
@@ -350,55 +349,6 @@ export const experience: Experience[] = [
       'Monitoramento inicial de alertas de segurança e eventos',
       'Identificação de vulnerabilidades e escalonamento de incidentes',
       'Administração básica de redes, servidores e dispositivos de armazenamento'
-    ]
-  },
-  {
-    company: 'ZTECH Endeavor',
-    role: 'Assistente de TI II',
-    period: 'dez 2021 — ago 2022',
-    location: 'Niterói, Rio de Janeiro, Brasil',
-    summary: 'Suporte Técnico N2 e serviços de infraestrutura e redes.',
-    highlights: [
-      'Configuração e administração de usuários em Active Directory',
-      'Manutenção de sistemas Windows, macOS e Linux',
-      'Projetos de montagem de rede de computadores',
-      'Gerenciamento de Windows Server e suporte a CFTV'
-    ]
-  },
-  {
-    company: 'Prepara Cursos Profissionalizantes',
-    role: 'Instrutor de TI',
-    period: 'mar 2011 — jun 2011',
-    location: 'Niterói, Rio de Janeiro, Brasil',
-    summary: 'Instrução em montagem e manutenção de computadores, redes e sistemas.',
-    highlights: [
-      'Elaboração de material didático para cursos de TI',
-      'Treinamentos em redes, servidores e infraestrutura',
-      'Instrutoria em produtividade, design gráfico e AutoCAD'
-    ]
-  },
-  {
-    company: 'Gtech',
-    role: 'Técnico de Suporte',
-    period: 'abr 2011 — out 2012',
-    location: 'São Gonçalo, Rio de Janeiro, Brasil',
-    summary: 'Montagem e manutenção de computadores e reparo de consoles.',
-    highlights: [
-      'Montagem de PCs personalizados e manutenção preventiva',
-      'Diagnóstico e reparo de hardware e rede',
-      'Reparo de consoles (PlayStation, Xbox, Nintendo)'
-    ]
-  },
-  {
-    company: 'CDP Digitalmax',
-    role: 'Técnico de TI',
-    period: 'out 2010 — abr 2011',
-    location: 'Niterói, Rio de Janeiro, Brasil',
-    summary: 'Suporte técnico, infraestrutura e administração de TI.',
-    highlights: [
-      'Suporte a usuários e diagnóstico de conectividade',
-      'Instalação de hardware e softwares',
-      'Monitoramento de servidores, switches e backups'
     ]
   }
 ];
