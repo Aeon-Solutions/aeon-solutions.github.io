@@ -36,8 +36,10 @@ import Footer from '../components/Footer.astro';
     gsap.registerPlugin(ScrollTrigger);
 
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
     
-    if (prefersReduced) {
+    // Desativa a animação em celulares ou caso o usuário prefira redução de movimento
+    if (prefersReduced || isMobile) {
       gsap.set('.reveal', { opacity: 1, y: 0 });
     } else {
       gsap.utils.toArray('.reveal').forEach((el) => {
@@ -57,7 +59,7 @@ import Footer from '../components/Footer.astro';
         );
       });
       
-      // Refresh ScrollTrigger after all resources (images, fonts) load
+      // Refresh ScrollTrigger after all resources load
       window.addEventListener('load', () => {
         ScrollTrigger.refresh();
       });
