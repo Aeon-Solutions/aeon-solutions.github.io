@@ -31,37 +31,39 @@ import Footer from '../components/Footer.astro';
 
   <script>
     import { gsap } from 'gsap';
-    import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-    gsap.registerPlugin(ScrollTrigger);
 
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const isMobile = window.matchMedia('(max-width: 768px)').matches;
     
-    // Desativa a animação em celulares ou caso o usuário prefira redução de movimento
-    if (prefersReduced || isMobile) {
+    // Se o usuário prefere redução de movimento, mostra tudo imediatamente
+    if (prefersReduced) {
       gsap.set('.reveal', { opacity: 1, y: 0 });
     } else {
-      gsap.utils.toArray('.reveal').forEach((el) => {
-        gsap.fromTo(el, 
-          { opacity: 0, y: 30 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: el,
-              start: 'top 90%',
-              toggleActions: 'play none none none'
-            }
+      // Usamos IntersectionObserver ao invés de ScrollTrigger. 
+      // Isso garante que a animação não dependa de níveis de scroll ou cálculos do navegador,
+      // disparando assim que o elemento aparecer na tela.
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Anima o elemento e remove o observador
+            gsap.to(entry.target, { 
+              opacity: 1, 
+              y: 0, 
+              duration: 0.8, 
+              ease: 'power2.out' 
+            });
+            observer.unobserve(entry.target);
           }
-        );
+        });
+      }, { 
+        threshold: 0.1, // Dispara quando 10% do elemento estiver visível
+        rootMargin: '0px 0px -50px 0px'
       });
-      
-      // Refresh ScrollTrigger after all resources load
-      window.addEventListener('load', () => {
-        ScrollTrigger.refresh();
+
+      gsap.utils.toArray('.reveal').forEach((el: any) => {
+        // Esconde inicialmente
+        gsap.set(el, { opacity: 0, y: 30 });
+        // Começa a observar
+        observer.observe(el);
       });
     }
   </script>
