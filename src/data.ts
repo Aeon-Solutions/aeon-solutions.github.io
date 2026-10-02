@@ -132,7 +132,7 @@ export interface CompetencyGroup {
 
 export const competencyGroups: CompetencyGroup[] = [
   {
-    title: 'Coordenação de TI & Documentação',
+    title: 'Coordenação de TI',
     items: [
       'Liderança e coordenação de equipes de suporte (N1/N2/N3)',
       'Gestão de KPIs: SLA, FCR, TMT e CSAT/NPS',
@@ -145,7 +145,7 @@ export const competencyGroups: CompetencyGroup[] = [
     ]
   },
   {
-    title: 'Windows Server / Infraestrutura',
+    title: 'Infraestrutura',
     items: [
       'Administração de servidores Windows/Linux',
       'Active Directory, GPOs, DNS e DHCP',
